@@ -1,3 +1,4 @@
+// Initialize all div with carousel class
 var carousels = bulmaCarousel.attach('.carousel', options);
 
 // Loop on each carousel initialized
