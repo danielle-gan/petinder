@@ -1,48 +1,81 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Hello Bulma!</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
-        <link rel="stylesheet" href="./assets/css/style.css">
-        
-	</head>
-	<body>
-        
-        <header>
-            <h1 class="title  is-large has-text-centered">Dunkin</h1>
-        </header>
-		<!-- Start Hero Carousel -->
-		<section class="hero is-large has-carousel has-text-centered">
-			<div id="carousel-demo" class="hero-carousel">
-				<div class="item-1">
-                    <img src=https://picsum.photos/200/300>
-					<!-- Slide Content -->
-				</div>
-				<div class="item-2">
-                    <img src=https://picsum.photos/200/300>
-					<!-- Slide Content -->
-				</div>
-				<div class="item-3">
-                    <img src=https://picsum.photos/200/300>
-					<!-- Slide Content -->
-				</div>
-			</div>
-			<div class="hero-head"></div>
-			<div class="hero-body"></div>
-			<div class="hero-foot"></div>
-		</section>
-		<!-- End Hero Carousel -->
 
-		<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
-        
-		<script>
-			bulmaCarousel.attach('#carousel-demo', {
-				slidesToScroll: 1,
-				slidesToShow: 1
-			});
-		</script>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title  is-large has-text-centered">Dunkin</h1>
+    </header>
+    <!-- Start Hero Carousel -->
+    <section class="hero is-large has-carousel has-text-centered">
+        <div id="carousel-demo" class="hero-carousel">
+            <div class="item-1">
+                <img src=https://picsum.photos/200/300>
+                <!-- Slide Content -->
+            </div>
+            <div class="item-2">
+                <img src=https://picsum.photos/200/300>
+                <!-- Slide Content -->
+            </div>
+            <div class="item-3">
+                <img src=https://picsum.photos/200/300>
+                <!-- Slide Content -->
+            </div>
+        </div>
+        <div class="hero-head"></div>
+        <div class="hero-body"><br>
+            <ul>
+                <li class="age">
+                Age
+                </li class="location">
+                <li>
+                    hi
+                </li>
+                <li class="gender">
+                    hi
+                </li>
+                <li class="size">
+                    hi
+                </li>
+                <li class="good-with-ani-kids">
+                    hi
+                </li>
+            </ul>
+        </div>
+        <div class="hero-foot">
+            <p>*</p>
+        </div>
+    </section>
+    <div class="has-text-centered"> <button>Adopt Me</button></div>
+    <!-- End Hero Carousel -->
+    <footer>
+        <div class="footer content has-text-centered">
+            <p>❤️ Made with love by Petinder</p>
+            <div>
+                &copy; 2022 Petinder, Inc.
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+
+    <script>
+        bulmaCarousel.attach('#carousel-demo', {
+            slidesToScroll: 1,
+            slidesToShow: 1
+        });
+    </script>
+
+</body>
+
 </html>
