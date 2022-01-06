@@ -8,3 +8,21 @@
 .hero-foot{
     background-color: tomato;
 }
+
+.logo{
+    width: 2em;
+    height: 2em;
+}
+
+
+.title {
+    color: rgb(152, 152, 243);
+}
+
+.subtitle {
+    color:rgb(184, 184, 247);
+}
+
+body {
+    font-family: Garamond, serif;
+}
