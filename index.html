@@ -7,24 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Petinder</title>
 </head>
 
 <body>
 
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
-
     <!-- The Modal -->
     <div id="myModal" class="modal">
-
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                    <input id="name" class="input" type="text" placeholder="Name">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Zip Code</label>
+                <div class="control">
+                    <input id="postalCode" class="input" type="text" placeholder="Zip Code">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Are you a dog or a cat person?</label>
+            </div>
+            <div class="field">
+                <div class="control">
+                  <label class="radio">
+                    <input id="speciesDog" type="radio" name="question">
+                    Dog
+                  </label>
+                  <label class="radio">
+                    <input id="species" type="radio" name="question">
+                    Cat
+                  </label>
+                </div>
+              </div>
+            <div class="field">
+                <div class="control">
+                    <button id="submitBtn" class="button is-link is-success">Submit</button>
+                </div>
+            </div>
         </div>
-
     </div>
+
     <header class="columns">
         <div class="column is-1-tablet is-1-mobile is-1-desktop">
             <img src="./assets/images/petinder-emblem.png">
@@ -36,6 +64,7 @@
     <section class="has-text-centered">
         <h2 class="subtitle">Tinder... but for pets. Find your pawfect match!</h2>
     </section>
+
     <main class="has-text-centered">
         <div class="card">
             <div class="card-image">
@@ -51,6 +80,7 @@
             </div>
         </div>
     </main>
+
     <footer>
         <div class="footer content has-text-centered">
             <p>❤️ Made with love by Petinder</p>
@@ -59,7 +89,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
     <script src="./assets/js/script2.js"></script>
