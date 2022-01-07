@@ -17,3 +17,14 @@ if (element && element.bulmaCarousel) {
 		console.log(state);
 	});
 }
+
+var pf = new petfinder.Client({apiKey: "r2JfhNwBP0572Z5Vi3v61yt3IBVXjR7QvrxulktxLNBSqa6cnw", secret: "U0snJ0pJCd6qr7sKn0ox64ef6sOHOWcFTflBDZwq"});
+
+pf.animal.search()
+    .then(function (response) {
+        // Do something with `response.data.animals`
+        console.log(response.data)
+    })
+    .catch(function (error) {
+        // Handle the error
+    });
