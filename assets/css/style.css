@@ -2,14 +2,20 @@
     align-items: center;
     width: 100%;
 }
-.container{
+
+.container {
     overflow: hidden;
 }
-.hero-foot{
+
+.hero-carousel {
+    align-items: center;
+}
+
+.hero-foot {
     background-color: tomato;
 }
 
-.logo{
+.logo {
     width: 2em;
     height: 2em;
 }
@@ -27,8 +33,6 @@ body {
     font-family: Garamond, serif;
 }
 
-
-
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -42,28 +46,40 @@ body {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+}
   
-  /* Modal Content */
-  .modal-content {
+/* Modal Content */
+.modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-  }
+}
   
-  /* The Close Button */
-  .close {
+/* The Close Button */
+.close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
+}
   
-  .close:hover,
-  .close:focus {
+.close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
+
+/* Media */
+@media screen and (max-width: 768px) {
+    .hero-body ul {
+        padding-top: 250px;
+    }
+}
+
+/* @media screen and (max-width: 575px) {
+    .hero-carousel {
+        align-items: center;
+    }
+} */
