@@ -1,5 +1,5 @@
-
-
+// petfinder API calls
+var pf = new petfinder.Client({ apiKey: "r2JfhNwBP0572Z5Vi3v61yt3IBVXjR7QvrxulktxLNBSqa6cnw", secret: "U0snJ0pJCd6qr7sKn0ox64ef6sOHOWcFTflBDZwq", species: "Cat" });
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -33,14 +33,44 @@ window.onclick = function (event) {
 //When the user clicks the submit button, store information in fields to local storage
 submitBtn.onclick = function () {
   var name = $('#name').val();
-  var postalCode = $('#postalCode').val();
+  // var postalCode = $('#postalCode').val();
   var speciesDog = $('#speciesDog').val();
+  var speciesCat = $('#speciesCat').val();
   localStorage.setItem("name", name);
-  localStorage.setItem("postalCode", postalCode);
+  // localStorage.setItem("postalCode", postalCode);
   if (speciesDog = 'on') {
     localStorage.setItem("species", "dog");
   }
-  else {
+  if (speciesCat= 'on') {
     localStorage.setItem("species", "cat");
   };
-};
+  modal.style.display = "none";
+
+  pf.animal.search({
+    type: localStorage.getItem("species"),
+    limit: 10,
+  })
+    .then(function (response) {
+      console.log(response);
+
+      var loop = true;
+      var i = 0; 
+      while (loop) {
+        if (response.data.animals[i].photos[0].full) {
+          var proPic = $("<img>").attr("src", response.data.animals[i].photos[0].full);
+          var animalName = $("<p>").text(response.data.animals[i].name);
+          console.log(response.data.animals[i].photos[0].full);
+          $(".name").append(animalName);
+          $(".card-image").append(proPic);
+          loop = false;
+        }
+        else {
+          i++
+        }
+      }
+    })
+    .catch(function (error) {
+      // Handle the error
+    });
+
+}
