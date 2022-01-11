@@ -1,5 +1,5 @@
-
-
+var yesButton = document.getElementById("yes-but")
+var noButton = document.getElementById("no-but")
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -44,3 +44,10 @@ submitBtn.onclick = function () {
     localStorage.setItem("species", "cat");
   };
 };
+
+yesButton.onclick = function () {
+  document.location.href = 'http://127.0.0.1:5500/index2.html'};
+   
+noButton.onclick = function () { 
+  document.location.href = 'http://127.0.0.1:5500/index2.html'}
+
