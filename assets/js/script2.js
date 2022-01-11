@@ -77,7 +77,6 @@ submitBtn.onclick = function () {
       // Handle the error
     });
 
-}
 };
 
 yesButton.onclick = function () {
