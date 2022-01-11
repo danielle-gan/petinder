@@ -28,3 +28,10 @@ pf.animal.search()
     .catch(function (error) {
         // Handle the error
     });
+
+	var adoptMe = document.getElementById("adopt")
+
+	adoptMe.onclick = function () { 
+		document.location.href = ''}
+
+		
