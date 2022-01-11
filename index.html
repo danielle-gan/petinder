@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assets/js/script2.js"></script>
     <title>Petinder</title>
 </head>
 
@@ -35,6 +36,7 @@
             </div>
             <div class="field">
                 <div class="control">
+
                   <label class="radio">
                     <input id="speciesDog" type="radio" name="question">
                     Dog
@@ -43,8 +45,9 @@
                     <input id="speciesCat" type="radio" name="question">
                     Cat
                   </label>
+
                 </div>
-              </div>
+            </div>
             <div class="field">
                 <div class="control">
                     <button id="submitBtn" class="button is-link is-success">Submit</button>
@@ -71,9 +74,19 @@
                 <!-- placeholder image -->
                 <!-- <img class="pic" src=""> -->
             </div>
-            <div class="btns">
-                <div class="button is-danger is-large">:(</div>
-                <div class="button is-success is-large">:)</div>
+            <div class="cardcontainer list">
+                <ul>
+                    <li class="card current">#1</li>
+                    <li class="card">#2</li>
+                    <li class="card">#3</li>
+                    <li class="card">#4</li>
+                    <li class="card">#5</li>
+                    <li class="card">#6</li>
+                </ul>
+                <div class="btns">
+                    <div class="button is-danger is-large" id="no-but">:(</div>
+                    <div class="button is-success is-large" id="yes-but">:)</div>
+                </div>
             </div>
             <div class="name">
             </div>

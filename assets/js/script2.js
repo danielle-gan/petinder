@@ -1,5 +1,8 @@
 // petfinder API calls
 var pf = new petfinder.Client({ apiKey: "r2JfhNwBP0572Z5Vi3v61yt3IBVXjR7QvrxulktxLNBSqa6cnw", secret: "U0snJ0pJCd6qr7sKn0ox64ef6sOHOWcFTflBDZwq", species: "Cat" });
+var yesButton = document.getElementById("yes-but")
+var noButton = document.getElementById("no-but")
+
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -44,6 +47,7 @@ submitBtn.onclick = function () {
   if (speciesCat= 'on') {
     localStorage.setItem("species", "cat");
   };
+
   modal.style.display = "none";
 
   pf.animal.search({
@@ -74,3 +78,10 @@ submitBtn.onclick = function () {
     });
 
 }
+};
+
+yesButton.onclick = function () {
+  document.location.href = 'http://127.0.0.1:5500/index2.html'};
+   
+noButton.onclick = function () { 
+  document.location.href = 'http://127.0.0.1:5500/index2.html'};
