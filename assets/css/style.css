@@ -3,13 +3,15 @@ body, .footer, .card{
     background-color: hsl(142, 52%, 96%);
 }
 
-/* .card{
+#postalCode, #name {
     background-color: hsl(142, 52%, 96%);
+
 }
 
-.footer {
-    background-color: hsl(142, 52%, 96%);
-} */
+.label, .radio, .card{
+    color:hsl(217, 71%, 53%);		
+}
+
 
 .buttons {
     align-items: center;
@@ -35,11 +37,11 @@ body, .footer, .card{
 
 
 .title {
-    color: rgb(152, 152, 243);
+    color: rgb(99, 99, 240);
 }
 
 .subtitle {
-    color:rgb(184, 184, 247);
+    color:rgba(63, 136, 219, 0.685);
 }
 
 body {
@@ -83,6 +85,13 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* footer style */
+.footer {
+    background-color: hsl(142, 52%, 96%);
+    color:hsl(217, 71%, 53%)		
+} 
+
 
 /* Media */
 @media screen and (max-width: 768px) {
