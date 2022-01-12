@@ -47,6 +47,7 @@ function displayAnimals() {
 
 var yesButton = document.getElementById("yes-but")
 var noButton = document.getElementById("no-but")
+var favoritesButton = document.getElementById("favorites")
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -122,3 +123,9 @@ noButton.onclick = function () {
   next();
   console.log(index);
 };
+
+
+favoritesButton.onclick = function() {
+  document.location.href = "./favorites.html";
+}
+
