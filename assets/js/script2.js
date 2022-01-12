@@ -1,6 +1,38 @@
 // petfinder API calls
 var pf = new petfinder.Client({ apiKey: "r2JfhNwBP0572Z5Vi3v61yt3IBVXjR7QvrxulktxLNBSqa6cnw", secret: "U0snJ0pJCd6qr7sKn0ox64ef6sOHOWcFTflBDZwq", species: "Cat" });
 
+// Andrew's help code
+const pets = [];
+let index = 0;
+
+function storeAnimals(response) {
+  for (let i = 0; i < response.data.animals.length; i++) {
+    if (response.data.animals[i].photos[0]) {
+      pets.push(response.data.animals[i]);
+    }
+  }
+}
+
+function next() {
+
+  if (index === pets.length) {
+    
+  }
+
+  console.log(pets[index]);
+  index++;
+  $(".clear").empty;
+  displayAnimals();
+}
+
+function displayAnimals() {
+  var proPic = $("<img>").attr("src", pets[index].photos[0].medium);
+  var animalName = $("<p>").text(pets[index].name);
+  console.log(pets[index].photos[0].medium);
+  $(".name").append(animalName);
+  $(".card-image").append(proPic);
+};
+
 var yesButton = document.getElementById("yes-but")
 var noButton = document.getElementById("no-but")
 
@@ -56,32 +88,21 @@ submitBtn.onclick = function () {
     .then(function (response) {
       console.log(response);
 
-      var loop = true;
-      var i = 0; 
-      while (loop) {
-        if (response.data.animals[i].photos[0].full) {
-          var proPic = $("<img>").attr("src", response.data.animals[i].photos[0].full);
-          var animalName = $("<p>").text(response.data.animals[i].name);
-          console.log(response.data.animals[i].photos[0].full);
-          $(".name").append(animalName);
-          $(".card-image").append(proPic);
-          loop = false;
-        }
-        else {
-          i++
-        }
-      }
+      storeAnimals(response);
+
+      displayAnimals();
     })
 
-    .catch(function (error) {
-      // Handle the error
-    });
+
 
 };
 
 
 yesButton.onclick = function () {
-  document.location.href = 'http://127.0.0.1:5500/index2.html'};
-   
-noButton.onclick = function () { 
-  document.location.href = 'http://127.0.0.1:5500/index2.html'};
+  document.location.href = 'http://127.0.0.1:5500/index2.html'
+};
+
+noButton.onclick = function () {
+  console.log(pets);
+  next();
+};
