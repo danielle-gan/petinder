@@ -7,7 +7,7 @@ let index = 0;
 
 function storeAnimals(response) {
   for (let i = 0; i < response.data.animals.length; i++) {
-    if (response.data.animals[i].photos[0]) {
+    if (response.data.animals[i].photos.length !== 0) {
       pets.push(response.data.animals[i]);
     }
   }
@@ -16,12 +16,23 @@ function storeAnimals(response) {
 function next() {
 
   if (index === pets.length) {
-    
+    pf.animal.search({
+      type: localStorage.getItem("species"),
+      limit: 50,
+    })
+  
+      .then(function (response) {
+        console.log(response);
+  
+        storeAnimals(response);
+  
+        displayAnimals();
+      })
   }
 
   console.log(pets[index]);
   index++;
-  $(".clear").empty;
+  $(".clear").empty();
   displayAnimals();
 }
 
