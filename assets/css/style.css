@@ -93,6 +93,12 @@ body {
 } 
 
 
+/* testing out dynamic background images */
+.pet-picture {
+    background-image: var(--image-url);
+}
+
+
 /* Media */
 @media screen and (max-width: 768px) {
     .hero-body ul {

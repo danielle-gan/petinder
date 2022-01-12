@@ -34,14 +34,14 @@
             <div class="field">
                 <form class="control">
 
-                  <label class="radio">
-                    <input id="speciesDog" type="radio" name="speciesDog">
-                    Dog
-                  </label>
-                  <label class="radio">
-                    <input id="speciesCat" type="radio" name="speciesCat">
-                    Cat
-                  </label>
+                    <label class="radio">
+                        <input id="speciesDog" type="radio" name="speciesDog">
+                        Dog
+                    </label>
+                    <label class="radio">
+                        <input id="speciesCat" type="radio" name="speciesCat">
+                        Cat
+                    </label>
 
                 </form>
             </div>
@@ -57,8 +57,13 @@
         <div class="column is-1-tablet is-1-mobile is-1-desktop">
             <img src="./assets/images/petinder-emblem.png">
         </div>
-        <div class="column is-11-tablet is-11-mobile is-11-desktop has-text-centered">
+        <div class="column is-10-tablet is-10-mobile is-10-desktop has-text-centered">
             <h1 class="title">Petinder</h1>
+        </div>
+        <div class="column is-1">
+            <button class="button is-medium is-light is-warning" id="favorites">
+                Favorites
+            </button>
         </div>
     </header>
     <section class="has-text-centered">
@@ -67,14 +72,11 @@
 
     <main class="has-text-centered">
         <div class="card">
-            <div class="card-image clear">
-                <!-- placeholder image -->
-                <!-- <img class="pic" src=""> -->
+            <div class="card-image clear"></div>
+            <div class="btns">
+                <div class="button is-danger is-large" id="no-but"><i class="fas fa-sad-tear"></i></div>
+                <div class="button is-success is-large" id="yes-but"><i class="fas fa-grin-hearts"></i></div>
             </div>
-                <div class="btns">
-                    <div class="button is-danger is-large" id="no-but"><i class="fas fa-sad-tear"></i></div>
-                    <div class="button is-success is-large" id="yes-but"><i class="fas fa-grin-hearts"></i></div>
-                </div>
             <div class="name clear">
             </div>
         </div>
