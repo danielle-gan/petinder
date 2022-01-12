@@ -4,7 +4,6 @@ var pf = new petfinder.Client({ apiKey: "r2JfhNwBP0572Z5Vi3v61yt3IBVXjR7Qvrxulkt
 var yesButton = document.getElementById("yes-but")
 var noButton = document.getElementById("no-but")
 
-
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -38,14 +37,12 @@ window.onclick = function (event) {
 submitBtn.onclick = function () {
   var name = $('#name').val();
   // var postalCode = $('#postalCode').val();
-  var speciesDog = $('#speciesDog').val();
-  var speciesCat = $('#speciesCat').val();
   localStorage.setItem("name", name);
   // localStorage.setItem("postalCode", postalCode);
-  if (speciesDog = 'on') {
+  if (document.querySelector('input[name="speciesDog"]:checked')) {
     localStorage.setItem("species", "dog");
   }
-  if (speciesCat= 'on') {
+  else if (document.querySelector('input[name="speciesCat"]:checked')) {
     localStorage.setItem("species", "cat");
   };
 
@@ -53,7 +50,7 @@ submitBtn.onclick = function () {
 
   pf.animal.search({
     type: localStorage.getItem("species"),
-    limit: 10,
+    limit: 50,
   })
 
     .then(function (response) {
