@@ -1,6 +1,6 @@
 
-body, .footer, .card{
-    background-color: hsl(142, 52%, 96%);
+body{
+    background-color: hsl(180, 60%, 88%);
 }
 
 #postalCode, #name {
@@ -12,10 +12,29 @@ body, .footer, .card{
     color:hsl(217, 71%, 53%);		
 }
 
+img {
+    align-self: center;
+}
+
+a {
+    width: 5em;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.no-flex {
+    display: block;
+}
 
 .buttons {
     align-items: center;
     width: 100%;
+}
+
+.btns  {
+    display: flex;
+    justify-content: space-between;
 }
 #favorites{
     background-color:rgb(138, 184, 243);
@@ -27,17 +46,8 @@ body, .footer, .card{
     background-color: rgba(255, 105, 180, 0.308);
 }
 
-
 .container {
     overflow: hidden;
-}
-
-.hero-carousel {
-    align-items: center;
-}
-
-.hero-foot {
-    background-color: tomato;
 }
 
 .logo {
@@ -47,7 +57,7 @@ body, .footer, .card{
 
 
 .title {
-    color: rgb(99, 99, 240);
+    color: rgba(63, 136, 219, 0.685);
 }
 
 .subtitle {
@@ -98,44 +108,67 @@ body {
 
 /* footer style */
 .footer {
-    background-color: hsl(142, 52%, 96%);
+    background-color: hsl(180, 60%, 88%);;
     color:hsl(217, 71%, 53%)		
 } 
 
 
-/* testing out dynamic background images */
-.pet-picture {
-    background-image: var(--image-url);
-}
-
-.pet-pictures, .pet-names, .pet-url {
+.pet-pictures{
     display: flex;
     justify-content: center;
 }
 /* favorites page styling */
 #back{
-    background-color:rgb(138, 184, 243);
+    background-color:rgba(63, 136, 219, 0.685);
     color: black;
 }
 #back:hover{
     background-color: rgba(255, 105, 180, 0.308);
 }
 
-.pet-names{
+.name{
     color:rgb(214, 29, 159);
+    font-weight: bold;
+    font-size: 2em;
 }
 
-
-.pet-pictures{
-    border: 3px dashed rgba(10, 163, 173, 0.534);
+.card {
+    width: 18em;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em;
+    background-color: hsl(142, 52%, 96%);
 }
 
-.pet-url:hover { 
-    text-decoration: underline; 
+.border{
+    border: 3px dashed rgba(63, 136, 219, 0.685);
+}
+
+.adopt-btn {
+    border: 3px dashed rgba(63, 136, 219, 0.685);
+    background-color: rgba(255, 105, 180, 0.308);
+    color: rgba(63, 136, 219, 0.685);
+    font-weight: bold;
+}
+
+.adopt-btn:hover { 
+    text-decoration: none; 
     font-style: italic;
-    
+    border: 3px dashed rgba(63, 136, 219, 0.685);
+    background-color: rgba(63, 136, 219, 0.685);
+    color: white;
+    font-weight: normal;
 }
 
+.card-header {
+    font-weight: bold;
+}
+
+.img-size {
+    width: 282px;
+    height: 282px;
+}
 
 /* Media */
 @media screen and (max-width: 768px) {
