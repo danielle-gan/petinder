@@ -98,6 +98,10 @@ body {
     background-image: var(--image-url);
 }
 
+.pet-pictures, .pet-names, .pet-url {
+    display: flex;
+    justify-content: center;
+}
 
 /* Media */
 @media screen and (max-width: 768px) {
