@@ -18,7 +18,7 @@ function display () {
     for (let i=0; i<pictures.length; i++) {
         var pic = $("<img>").attr("src", pictures[i]).addClass("img-size")
         var name = $("<h2>").text(names[i]).addClass("no-flex name")
-        var link = $("<a>").attr("href", url[i]).text("Adopt!").addClass("button adopt-btn my-2");
+        var link = $("<a>").attr("href", url[i]).attr("target","_blank").text("Adopt!").addClass("button adopt-btn my-2");
         var card = $("<div>").addClass("card border my-2");
         card.append(pic,name,link);
         $(".pet-pictures").append(card);
