@@ -5,7 +5,6 @@ const url = [];
 
 window.onload = function () {
     var favorites = JSON.parse(localStorage.getItem("favorites"));
-    console.log(favorites)
 
     for (let i=0; i <favorites.length; i++) {
         pictures.push(favorites[i].photos[0].medium)
@@ -16,7 +15,6 @@ window.onload = function () {
 }
 
 function display () {
-    console.log(pictures,names);
     for (let i=0; i<pictures.length; i++) {
         var pic = $("<img>").attr("src", pictures[i]).addClass("img-size")
         var name = $("<h2>").text(names[i]).addClass("no-flex name")

@@ -24,15 +24,12 @@ function next() {
     })
 
       .then(function (response) {
-        console.log(response);
-
         storeAnimals(response);
 
         displayAnimals();
       })
   }
 
-  console.log(pets[index]);
   index++;
   $(".clear").empty();
   displayAnimals();
@@ -62,7 +59,6 @@ var submitBtn = document.getElementById("submitBtn");
 window.onload = function () {
   modal.style.display = "block";
   var favorites = JSON.parse(localStorage.getItem("favorites"));
-  console.log(favorites)
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -83,10 +79,10 @@ submitBtn.onclick = function () {
   // var postalCode = $('#postalCode').val();
   localStorage.setItem("name", name);
   // localStorage.setItem("postalCode", postalCode);
-  if (document.querySelector('input[name="speciesDog"]:checked')) {
+  if (document.querySelector('input[id="speciesDog"]:checked')) {
     localStorage.setItem("species", "dog");
   }
-  else if (document.querySelector('input[name="speciesCat"]:checked')) {
+  else if (document.querySelector('input[id="speciesCat"]:checked')) {
     localStorage.setItem("species", "cat");
   };
 
@@ -98,8 +94,6 @@ submitBtn.onclick = function () {
   })
 
     .then(function (response) {
-      console.log(response);
-
       storeAnimals(response);
 
       displayAnimals();
@@ -111,7 +105,6 @@ submitBtn.onclick = function () {
 // sends you to petfinder page on a separate page, shows the next animal, and saves current pet from array to local storage 
 yesButton.onclick = function () {
   var link = [pets[index].url];
-  window.open(link, '_blank');
   var favorites = JSON.parse(localStorage.getItem("favorites"));
   if (favorites !== null) {
     favorites.push(pets[index]);
@@ -120,16 +113,14 @@ yesButton.onclick = function () {
     var favorites = [];
     favorites.push(pets[index]);
   }
-  console.log(favorites.length);
+
   localStorage.setItem("favorites", JSON.stringify(favorites));
   next();
 };
 
 // shows next pet
 noButton.onclick = function () {
-  console.log(pets);
   next();
-  console.log(index);
 };
 
 
