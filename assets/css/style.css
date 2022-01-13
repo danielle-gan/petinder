@@ -1,11 +1,7 @@
-
-body{
-    background-color: hsl(180, 60%, 88%);
-}
-
-#postalCode, #name {
-    background-color: hsl(142, 52%, 96%);
-
+html, body{
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    height:100%;
+    font-family: Garamond, serif;
 }
 
 .label, .radio, .card{
@@ -43,7 +39,7 @@ a {
 }
 
 #favorites:hover{
-    background-color: rgba(255, 105, 180, 0.308);
+    background-color: #D9AFD9;
 }
 
 .container {
@@ -51,39 +47,38 @@ a {
 }
 
 .logo {
-    width: 2em;
-    height: 2em;
+    width: 60px;
 }
 
-
-.title {
+.reload {
     color: rgba(63, 136, 219, 0.685);
 }
 
+.title {
+    color: rgba(63, 136, 219, 0.685);
+    font-size: 3rem;
+    word-break: keep-all;
+}
+
 .subtitle {
+    font-weight: bold;
+    font-size: 1rem;
     color:rgba(63, 136, 219, 0.685);
 }
 
-body {
-    font-family: Garamond, serif;
-}
-
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
 }
   
-/* Modal Content */
 .modal-content {
     background-color: #fefefe;
     margin: auto;
@@ -92,7 +87,6 @@ body {
     width: 80%;
 }
   
-/* The Close Button */
 .close {
     color: #aaaaaa;
     float: right;
@@ -106,28 +100,37 @@ body {
     cursor: pointer;
 }
 
-/* footer style */
 .footer {
-    background-color: hsl(180, 60%, 88%);;
-    color:hsl(217, 71%, 53%)		
+    background-color: rgba(0,0,0,0);
+    color:hsl(217, 71%, 53%);
+    margin-top: 6rem;
+    padding: 0;		
 } 
 
 
-.pet-pictures{
+.pet-pictures {
     display: flex;
     justify-content: center;
 }
+
 /* favorites page styling */
-#back{
+#back {
     background-color:rgba(63, 136, 219, 0.685);
     color: black;
+    position: relative;
+    margin-left: 0;
+    border: 0;
 }
-#back:hover{
-    background-color: rgba(255, 105, 180, 0.308);
+#back:hover {
+    background-color: #D9AFD9;
+}
+
+.title-faves {
+    margin-left: 27%;
 }
 
 .name{
-    color:rgb(214, 29, 159);
+    color:#D9AFD9;
     font-weight: bold;
     font-size: 2em;
 }
@@ -138,7 +141,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-top: 1em;
-    background-color: hsl(142, 52%, 96%);
 }
 
 .border{
@@ -170,16 +172,7 @@ body {
     height: 282px;
 }
 
-/* Media */
-@media screen and (max-width: 768px) {
-    .hero-body ul {
-        padding-top: 250px;
-    }
+.columns {
+    margin:0!important;
+    width: 100%;
 }
-
-/* @media screen and (max-width: 575px) {
-    .hero-carousel {
-        align-items: center;
-    }
-} */
-
