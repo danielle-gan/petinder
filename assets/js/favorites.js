@@ -18,12 +18,12 @@ window.onload = function () {
 function display () {
     console.log(pictures,names);
     for (let i=0; i<pictures.length; i++) {
-        var pic = $("<img>").attr("src", pictures[i])
-        $(".pet-pictures").append(pic);
-        var name = $("<h2>").text(names[i])
-        $(".pet-names").append(name);
-        var link = $("<a>").attr("href", url[i]).text("Adopt!");
-        $(".pet-url").append(link);
+        var pic = $("<img>").attr("src", pictures[i]).addClass("img-size")
+        var name = $("<h2>").text(names[i]).addClass("no-flex name")
+        var link = $("<a>").attr("href", url[i]).text("Adopt!").addClass("button adopt-btn my-2");
+        var card = $("<div>").addClass("card border my-2");
+        card.append(pic,name,link);
+        $(".pet-pictures").append(card);
     }
 }
 
