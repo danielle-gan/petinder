@@ -5,7 +5,7 @@ var pf = new petfinder.Client({ apiKey: "r2JfhNwBP0572Z5Vi3v61yt3IBVXjR7Qvrxulkt
 const pets = [];
 let index = 0;
 
-const favorites = [];
+var favorites = [];
 
 function storeAnimals(response) {
   for (let i = 0; i < response.data.animals.length; i++) {
@@ -22,12 +22,12 @@ function next() {
       type: localStorage.getItem("species"),
       limit: 50,
     })
-  
+
       .then(function (response) {
         console.log(response);
-  
+
         storeAnimals(response);
-  
+
         displayAnimals();
       })
   }
@@ -111,10 +111,18 @@ submitBtn.onclick = function () {
 // sends you to petfinder page on a separate page, shows the next animal, and saves current pet from array to local storage 
 yesButton.onclick = function () {
   var link = [pets[index].url];
-  window.open(link,'_blank');
-  next();
-  favorites.push(pets[index]);
+  window.open(link, '_blank');
+  var favorites = JSON.parse(localStorage.getItem("favorites"));
+  if (favorites !== null) {
+    favorites.push(pets[index]);
+  }
+  else {
+    var favorites = [];
+    favorites.push(pets[index]);
+  }
+  console.log(favorites.length);
   localStorage.setItem("favorites", JSON.stringify(favorites));
+  next();
 };
 
 // shows next pet
@@ -125,7 +133,7 @@ noButton.onclick = function () {
 };
 
 
-favoritesButton.onclick = function() {
+favoritesButton.onclick = function () {
   document.location.href = "./favorites.html";
 }
 
