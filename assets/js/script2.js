@@ -31,12 +31,13 @@ function next() {
   }
 
   index++;
-  $(".clear").empty();
+  // $(".clear").empty();
   displayAnimals();
 }
 
 function displayAnimals() {
-  var proPic = $("<img>").attr("src", pets[index].photos[0].medium);
+  $(".clear").empty();
+  var proPic = $("<img>").attr("src", pets[index].photos[0].medium).addClass("img-size");
   var animalName = $("<p>").text(pets[index].name);
   $(".name").append(animalName);
   $(".card-image").append(proPic);
