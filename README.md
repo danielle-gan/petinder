@@ -8,6 +8,8 @@ SO THAT I can find a pet I want to adopt while having fun at the same time. <br>
 ## How to Use
 When you load the page, you should be greeted with a modal. Fill the modal out and look at the first pet! If you are interested, click on the green button, if not, click on the red button.<br><br>
 All of the pets you "liked" are saved to the favorites page in the event that you can't decide on a pet on your first go-around!
+<br><br>
+Click on the fact below the cards to filter through facts!
 
 ## Challenges
 Most of the challenges we faced were with using the Petfinder API
@@ -32,3 +34,4 @@ Local Storage
 - Bulma
 - FontAwesome API
 - Petfinder API
+- Cat-Facts API

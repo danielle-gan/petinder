@@ -36,6 +36,7 @@ a {
     background-color:rgb(138, 184, 243);
     color: black;
     float: right;
+    font-family: garamond,serif;
 }
 
 #favorites:hover{
@@ -100,13 +101,22 @@ a {
     cursor: pointer;
 }
 
+.fact {
+    margin-top: 2em;
+    color:rgba(63, 136, 219, 0.685);
+    font-family: garamond,serif;
+}
+
+.fact:hover {
+    font-weight: bold;
+}
+
 .footer {
     background-color: rgba(0,0,0,0);
     color:hsl(217, 71%, 53%);
     margin-top: 6rem;
     padding: 0;		
 } 
-
 
 .pet-pictures {
     display: flex;
@@ -120,6 +130,7 @@ a {
     position: relative;
     margin-left: 0;
     border: 0;
+    font-family: garamond,serif;
 }
 #back:hover {
     background-color: #D9AFD9;
