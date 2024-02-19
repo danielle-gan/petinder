@@ -1,5 +1,5 @@
 // petfinder API calls
-var pf = new petfinder.Client({ apiKey: "r2JfhNwBP0572Z5Vi3v61yt3IBVXjR7QvrxulktxLNBSqa6cnw", secret: "U0snJ0pJCd6qr7sKn0ox64ef6sOHOWcFTflBDZwq", species: "Cat" });
+var pf = new petfinder.Client({ apiKey: "PRf5YZKxbkdfUM6br4HEfoIRhTIp2htCSPGHAhAad7li5t438n", secret: "5ysn9wZGHQ58CRUMxK8R5wCJl5VZC5MHgypVdj7q", species: "Cat" });
 
 // Global Variables
 const pets = [];
